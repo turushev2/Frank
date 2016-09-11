@@ -1,0 +1,59 @@
+.menu-main {
+	
+	display: inline-block;
+	&__item {
+		width: 45px;
+		height: 45px;
+		display: block;
+		background-color: #eee;
+		position: relative;
+		
+		&:before {
+			content:"";		
+		    align-content:center;
+			width: 35px;
+			height: 35px;
+			background-repeat: no-repeat;
+			top:5px;
+			left:7px;
+		}
+		
+	}
+	
+	&--back{
+		background-color: $gray;
+		
+		&:before{
+			background-image: url(../img/back.png);
+			top:8px;
+		}
+	}
+	&--profile{
+		background-color: $purple;
+		
+		&:before{
+			background-image: url(../img/profile.png);
+		}
+	}
+	&--events{
+		background-color: $blue;
+		
+		&:before{
+			background-image: url(../img/events.png);
+		}
+	}
+	&--notes{
+		background-color: $red;
+		
+		&:before{
+			background-image: url(../img/notes.png);
+		}
+	}
+	&--calendar{
+		background-color: $yellow;
+		
+		&:before{
+			background-image: url(../img/calendar.png);
+		}
+	}
+}

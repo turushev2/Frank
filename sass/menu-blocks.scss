@@ -1,0 +1,75 @@
+.menu-blocks{
+	background-color: $menu-blocks;
+	
+	&__item{
+		width: 32%;
+		color: #fff;
+		display: inline-block;
+		text-align: center;
+		padding-top: 100px;
+		padding-bottom: 10px;
+		margin-bottom: 2%;
+		margin-right: 2%;
+		text-decoration: none;
+		font-size: 26px;
+		background-color: #000;
+		@include shadow();
+		@include transition();
+		position: relative;
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+		&:hover{
+			@include Hshadow();
+			@include scale();
+
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: inline-block;
+			width: 90px;
+			height: 90px;
+			background-size: cover;
+		}
+	}
+	&--profile{
+		background-color: $purple;
+		&:before{
+			background-image: url(../img/avatar.svg);
+
+		}
+	}
+	&--planning{
+		background-color: $green;
+		&:before{
+			background-image: url(../img/tactics.svg);
+
+		}
+	}
+	&--calendar{
+		background-color: $yellow;
+		&:before{
+			background-image: url(../img/calendar.svg);
+
+		}
+	}
+	&--notes{
+		background-color: $red;
+		&:before{
+			background-image: url(../img/note.svg);
+
+		}
+	}
+	&--events{
+		background-color: $blue;
+		&:before{
+			background-image: url(../img/sign.svg);
+
+		}
+	}
+}
+
