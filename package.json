@@ -18,7 +18,6 @@
   "homepage": "https://github.com/Badaboom1995/Frank#readme",
   "devDependencies": {
     "browser-sync": "^2.15.0",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.12",
     "gulp-imagemin": "^3.0.3",

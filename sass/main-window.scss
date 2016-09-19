@@ -1,0 +1,53 @@
+.main-window {
+	background-color: #FFF;
+	width: 100%;
+	height: 500px;
+	&__stikers{
+		padding-left: 0;
+		
+		&--item {
+			list-style: none;
+			display: none;
+			&.active {
+
+				color: #bbb;
+				display: block;
+			}
+		}
+	}
+	&__controls {
+		margin-bottom: 30px;
+		text-align: center;
+    	padding: 0px;
+		&--item {
+			display: inline-block;
+			margin-left: 10px;
+			transition:.3s;
+			&:hover,
+			&.active {
+				transition:.3s;
+				position: relative;
+				a:before{
+				content:'';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: #46cf8f;
+				bottom: -4px;
+				transition:.3s;
+				}
+			}
+			&:first-child{
+				margin-left: 0;
+			}
+			
+		}
+		&--link {
+			color: #000;
+			text-decoration: none;
+			display: block;
+			
+			
+	}
+		
+}}
