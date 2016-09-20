@@ -1,5 +1,6 @@
 .menu-main {
 	display: inline-block;
+	@include shadow();
 	position: absolute;
 	left: -45px;
 	&__item {
@@ -8,7 +9,6 @@
 		display: block;
 		background-color: #eee;
 		position: relative;
-		
 		&:before {
 			content:"";		
 			width: 35px;
@@ -18,51 +18,49 @@
 			left:7px;
 			position: absolute;
 		}
-		
 	}
-	
 	&--back{
 		background-color: $gray;
-		
 		&:before{
 			background-image: url(../img/back.png);
 			top:8px;
+			background-size: cover;
 		}
 	}
 	&--profile{
 		background-color: $purple;
-		
 		&:before{
-			background-image: url(../img/profile.png);
+			background-image: url(../img/avatar.svg);
+			background-size: cover;
 		}
-
 	}
 	&--events{
 		background-color: #19b5fe;
-		
 		&:before{
-			background-image: url(../img/events.png);
+			background-image: url(../img/sign.svg);
+			background-size: cover;
 		}
 	}
 	&--notes{
 		background-color: $red;
 		&:before{
-			background-image: url(../img/notes.png);
+			background-image: url(../img/note.svg);
+			background-size: cover;
 		}
 	}
 	&--calendar{
 		background-color: $yellow;
-		
 		&:before{
-			background-image: url(../img/calendar.png);
-			left: 5px;
+			background-image: url(../img/calendar.svg);
+			background-size: cover;
+			;
 		}
 	}
 	&--planning{
 		background-color: $green;
-		
 		&:before{
-			background-image: url(../img/planning.png);
+			background-image: url(../img/tactics.svg);
+			background-size: cover;
 		}
 	}
 }
