@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Frank events</title>
+  <title>Frank planning</title>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body class ="general__events">
+<body class ="general__planning">
  <div class="frank-title">
       <p class="frank-title__frank">Frank</p>
-      <h2 class ="frank-title__name">События</h2>
+      <h2 class ="frank-title__name">Планирование</h2>
  </div>
   <main class="container">
     <div class="menu-main">
@@ -167,6 +167,43 @@
     </div>
     <div class="more">
         <a href="">Показать больше</a>
+    </div>
+    <div class="modal">
+      <h2>Постановка цели</h2>
+      <div class="modal__main">
+        <h3 class="modal__main--h3">Основное</h3>
+        <div class="modal__main-name">
+          <label for="name">Название</label>
+          <input type="text" name="name">
+        </div>
+        <div class="modal__main-deadline">  
+          <label for="deadline">Дедлайн</label>
+          <div class="deadline">
+            <input type="text" name="deadline" class="deadline__day" placeholder="1">
+            <input type="text" name="deadline" class="deadline__month" placeholder="Сентябрь">
+            <input type="text" name="deadline" class="deadline__year" placeholder="1995">
+          </div>
+        </div>
+        <div class="modal__main-importance">
+          <label for="importance">Важность</label>
+          <input type="text" name="importance">
+        </div>
+        <div class="modal__main-criterion">
+          <label for="criterion">Критерии оценки</label>
+          <input type="text" name="criterion">
+        </div>
+      </div>
+      <div class="modal__additionally">
+        <h2>Дополнительно</h2>
+        <div class="additionally">
+          <p class=""><input type="checkbox"> Опубликовать</p>
+          <p class=""><input type="checkbox"> Отображать в профиле</p>
+        </div>
+      </div>
+      <div class="modal__ready">
+        <a href="" class="ready">Готово</a>
+        <p class=""><input type="checkbox"> Разбить на подцепи</p>
+      </div>
     </div>
   </main>
   <div class="container">

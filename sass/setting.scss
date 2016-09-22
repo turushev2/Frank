@@ -1,14 +1,14 @@
-.add-sticker {
-    &__plus {
+.setting {
+    &__nut {
     position: absolute;
-	top: 10px;
-	background-color: #43b05c;
+	bottom: 50px;
 	height: 50px;
 	width: 50px;
 	right: 20px;
 	content: "";
-	background-image: url(../img/plus.svg);
+	background-image: url(../img/settings.svg);
     background-size: contain;
     border-radius: 100%;
+    background-color: #006df0;
     }
 }

@@ -1,0 +1,92 @@
+.modal {
+	@include shadow();
+	position: absolute;
+	background-color: #333333;
+	padding: 0px 30px;
+	text-align: center;
+	width: 35%;
+	left: 30%;
+	h2{
+		position: relative;
+		text-align: center;
+	}
+	&__main:after {
+		position: absolute;
+		width: 100%;
+		top:-10px;
+		left: 0;
+		height: 2px;
+		content: "";
+		border-bottom: 2px solid #444444;
+	}
+	&__main {
+		text-align: left;
+		position: relative;
+		&--h3{
+			text-align: center;
+		}
+	}
+	&__main:before {
+		position: absolute;
+		width: 100%;
+		bottom: -15px;
+		left: 0;
+		height: 2px;
+		content: "";
+		border-bottom: 2px solid #444444;
+	}
+	&__main-name,
+	&__main-importance,
+	&__main-criterion,
+	&__main-deadline
+	 {
+		display: flex;
+    	justify-content: space-between;
+    	margin-bottom: 15px;
+	}
+    	.deadline__day{
+    		width: 33px;
+    		
+    	}
+    	.deadline__month{
+    		width: 100px;
+    	}
+    	.deadline__year{
+    		width: 45px;
+    	}
+    	.deadline__month,
+    	.deadline__year,
+    	.deadline__day {
+    		text-align: center;
+    	}
+    .additionally{
+    	text-align: left;
+    }
+    &__additionally:before{
+    	position: absolute;
+		width: 100%;
+		bottom: -15px;
+		left: 0;
+		height: 2px;
+		content: "";
+		border-bottom: 2px solid #444444;
+    }
+    &__additionally {
+    	position: relative;
+    }
+    &__ready {
+    	padding-top: 15px;
+    	.ready{
+    	text-decoration: none;
+    	color: #FFF;
+    	padding: 10px 50px;
+    	background-color: #46cf8f;
+   	    border-radius: 10px;
+   	    display: inline-block;
+   	    }
+   	    p{
+   	    	margin:10px 0px;
+   	    }
+    }
+
+}
