@@ -2,6 +2,12 @@
 	&__events {
 		background-color: $blue;
 	}
+	&__calendar{
+		background-color: $yellow;
+		.main-window{
+			overflow: visible;
+		}
+	}
 	&__planning {
 		background-color: $green;
 	}

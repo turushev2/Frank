@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frank calendar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="general__calendar">
+  <div class="frank-title">
+      <p class="frank-title__frank">Frank</p>
+      <h2 class ="frank-title__name">Календарь</h2>
+ </div>
+ <main class="container">
+    <div class="menu-main">
+     <a href="profile.html" class="menu-main__item menu-main--profile">Профиль</a>
+     <a href="events.html" class="menu-main__item menu-main--events">События</a>
+     <a href="notes.html" class="menu-main__item menu-main--notes">Заметки</a>
+     <a href="calendar.html" class="menu-main__item menu-main--calendar">Календарь</a>
+     <a href="planning.html" class="menu-main__item menu-main--planning">Планирование</a>
+    </div>
+    <div class="main-window">
+      <nav class="months">
+        <ul class="months__list">
+          <li class="months__list-item"><a href="#" class="months__list-link">Июнь</a></li>
+          <li class="months__list-item"><a href="#" class="months__list-link active">Июль</a></li>
+          <li class="months__list-item"><a href="#" class="months__list-link">Август</a></li>
+          <li class="months__control">
+            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+              <g>
+                <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+              </g>
+            </svg>
+          </li>
+          <li class="months__control months__control--left">
+            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+            <g>
+              <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+            </g>
+            </svg>
+          </li>
+        </ul>      
+      </nav>
+      <table class="calendar"> 
+        <div class="calendar__day-modal"></div>
+        <tr class="calendar__title-row">
+          <th class="calendar__title-cell">Понедельник</th>
+          <th class="calendar__title-cell">Вторник</th>
+          <th class="calendar__title-cell">Среда</th>
+          <th class="calendar__title-cell">Четверг</th>
+          <th class="calendar__title-cell">Пятница</th>
+          <th class="calendar__title-cell">Суббота</th>
+          <th class="calendar__title-cell">Воскресенье</th>
+        </tr>
+        <tr>
+          <td class="calendar__day calendar__day--past">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-completed">4/10</span>
+          </td>
+          <td class="calendar__day calendar__day--past">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-completed">7/10</span>
+            <span class="calendar__target-complete"></span>
+          </td>
+          <td class="calendar__day calendar__day--now">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">0</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">0</span>
+          </td>
+        </tr>
+        <tr>
+         <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">0</span>
+          </td>
+        </tr>
+        <tr>
+         <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">0</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">5</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+            <span class="calendar__events-planned">0</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="modal-calendar">
+      <div class="modal-calendar__head">
+         <nav class="months">
+        <ul class="months__list">
+          <li class="months__list-item"><a href="#" class="months__list-link active">2 Июля</a></li>
+          <li class="months__control">
+            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+              <g>
+                <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+              </g>
+            </svg>
+          </li>
+          <li class="months__control months__control--left">
+            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+            <g>
+              <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+            </g>
+            </svg>
+          </li>
+        </ul>      
+      </nav>
+      </div>
+      <div class="modal-calendar__stiker">
+        <div class="stiker--small">
+          <h2 class="stikers__h2">Покончить с собой</h2>
+          <p>Цель:Слиться с космосом</p>
+          <p>Дедлаин: 18.09.2015</p>
+          <p>Важность: 5</p>
+          <a href="" class="complete">Выполнить</a>
+        </div>
+        <div class="stiker--small">
+          <h2 class="stikers__h2">Покончить с собой</h2>
+          <p>Цель:Слиться с космосом</p>
+          <p>Дедлаин: 18.09.2015</p>
+          <p>Важность: 5</p>
+          <a href="" class="complete">Выполнить</a>
+        </div>
+        <div class="stiker--small">
+          <h2 class="stikers__h2">Покончить с собой</h2>
+          <p>Цель:Слиться с космосом</p>
+          <p>Дедлаин: 18.09.2015</p>
+          <p>Важность: 5</p>
+          <a href="" class="complete">Выполнить</a>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__frank">
+      <img src="img/frank.png" alt="">
+    </div>
+    <div class="page-footer__progress">
+      <p class="page-footer__status-text">Отлично!</p>
+      <div class="page-footer__progress-bar">
+        <div class="page-footer__complete"></div>
+      </div>
+    </div>
+    <div class="social">
+      <a href="" class="social__icon social__icon--facebook"></a>
+      <a href="" class="social__icon social__icon--vk"></a>
+      <a href="" class="social__icon social__icon--twitter"></a>
+    </div>
+    <div class="page-footer__lvl">
+      <p class="page-footer__status-text">Уровень over9000</p>
+      <div class="page-footer__progress-bar">
+        <div class="page-footer__complete"></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

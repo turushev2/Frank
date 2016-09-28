@@ -1,11 +1,13 @@
 .modal {
 	@include shadow();
-	position: absolute;
+	position: fixed;
 	background-color: #333333;
 	padding: 0px 30px;
 	text-align: center;
-	width: 35%;
-	left: 30%;
+	width: 26%;
+	left: 50%;
+	z-index: 10001;
+	transform: translateX(-50%);
 	h2{
 		position: relative;
 		text-align: center;
@@ -88,5 +90,16 @@
    	    	margin:10px 0px;
    	    }
     }
+
+}
+.background {
+ background-color: #000; 
+  height: 100%;
+  left: 0;
+  opacity: 0.50;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 
 }

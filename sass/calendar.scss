@@ -1,0 +1,86 @@
+.calendar{
+	border-collapse: collapse;
+	border: 1px solid transparent;
+	&__title-cell{
+		width: 135px;
+		border: 1px solid #d2d2d2;
+		margin: 0;
+		height: 30px;
+		background-color: #f1f1f1;
+		color: #000;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	&__day{
+		text-align: center;
+		width: 135px;
+		background-color: #fff;
+		height: 97px;
+		border: 1px solid #666;
+		color: #000;
+		position: relative;
+
+		&:hover{
+			// background-color: $blue;
+			cursor: pointer;
+			transform:scale(1.1);
+			border: 1px solid #666;
+			@include transition();
+			@include Hshadow();
+			z-index: 9;
+			background-color: #eee;
+			-webkit-backface-visibility: hidden;
+			.calendar__date{
+				// color: #fff;
+				@include transition();
+			}
+		}
+	}
+	&__day--past{
+		@include transition()	
+		.calendar__date{
+			color: #ccc;
+		}
+		&:hover{
+			.calendar__events-completed{
+				// color: #fff;
+			}
+		}
+	}
+	&__events-completed{
+		color: $green;
+		font-size: 30px;			
+	}
+	&__events-planned{
+		color: #fff;
+		font-size: 26px;
+		padding: 14px 22px;
+		background-color: $green;
+		border-radius: 50%;
+	}
+	&__date{
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		font-size: 18px;
+	}
+	&__target-complete{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		display: inline-block;
+		width: 15px;
+		background-image: url(../img/target.svg);
+		background-size: contain;
+		height: 15px;
+	}
+	&__day--now{		
+			background-color: $blue;
+			&:hover{
+				background-color: $blue;
+			}
+			.calendar__date{
+				color: #fff;
+			}
+		}
+}

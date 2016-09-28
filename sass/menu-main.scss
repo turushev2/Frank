@@ -4,11 +4,17 @@
 	position: absolute;
 	left: -45px;
 	&__item {
+		z-index: 9;
 		width: 45px;
 		height: 45px;
-		display: block;
+		display: flex;
+		align-items: center;
 		background-color: #eee;
 		position: relative;
+		font-size: 0;
+		text-decoration: none;
+		color: #fff;
+		@include transition();
 		&:before {
 			content:"";		
 			width: 35px;
@@ -17,6 +23,14 @@
 			top:5px;
 			left:7px;
 			position: absolute;
+		}
+		&:hover{
+			width: auto;
+			@include Hshadow();
+			padding-left: 45px;
+			padding-right: 20px;
+			transform:translate(-50%);
+			font-size: 20px;
 		}
 	}
 	&--back{

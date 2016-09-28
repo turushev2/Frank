@@ -1,11 +1,12 @@
 .main-window {
 	@include shadow();
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 	background-color: #FFF;
 	width: 100%;
-	height: 500px;
+	min-height: 500px;
+	position: relative;
 	overflow-y: scroll;
-	
+	max-height: 666px;
 	&__stikers{
 		padding-left: 0;
 		&--item {
@@ -30,13 +31,13 @@
 				transition:.3s;
 				position: relative;
 				a:before{
-				content:'';
-				position: absolute;
-				width: 100%;
-				height: 2px;
-				background-color: #46cf8f;
-				bottom: -4px;
-				transition:.3s;
+					content:'';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: #46cf8f;
+					bottom: -4px;
+					transition:.3s;
 				}
 			}
 			&:first-child{
@@ -52,12 +53,10 @@
 }}
 .more{
 		position: absolute;
-		
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 30px;
-		
-		a {
+		bottom: 30px;	
+		a{
 			background-color: #535353;
 			color: #fff;
 			padding: 10px 35px;		
