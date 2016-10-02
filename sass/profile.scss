@@ -1,0 +1,79 @@
+.profile{
+	display: flex;
+	// -webkit-flex-wrap: wrap;
+	//     -ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	&__wall {
+		border:1px solid black;
+		width: 80%;
+	}
+	&__sidebar{
+		border-top:1px solid #313131;
+		margin-left: 10px;
+		display:flex;
+		flex-wrap: wrap;
+		width: 17%;
+		text-align: center;
+		margin-right: 15px;
+		&__element{
+			color: #000;
+			
+		}
+		&__element-subscribers{
+			border:1px solid #313131;		
+			padding: 10px;
+		    border-radius: 5px;
+			.subscribers {
+				display: inline-flex;
+				font-size: 12px;
+				margin-bottom: 5px;
+			}	
+			.action {
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+		&__element-goals{
+			border:1px solid #313131;
+			padding: 3px;
+			border-radius: 5px;
+		}
+		&__element-subscription{
+			border:1px solid #313131;		
+			padding: 10px;
+		    border-radius: 5px;
+		    display: flex;
+		    flex-wrap: wrap;
+		    p{
+		    	font-size: 12px;
+		    }
+		    .subscription{
+		    	width: 50%;
+		    }
+		}
+	}
+	&__information {
+		display: flex;
+		width: 100%;
+		margin-bottom: 10px;
+		&--page-avatar{
+			text-align: center;
+		}
+		&--general {
+			color:black;
+		}
+		&--attribute {
+			margin-bottom: 10px;
+			margin-top: 10px;
+			font-weight: bold;
+		}
+		&--avatar{
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+.status {
+	font-size: 16px;
+	color: #7e7e7e;
+}

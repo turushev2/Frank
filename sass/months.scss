@@ -8,9 +8,19 @@
 		width: 350px;
 		padding-left: 0;
 		position: relative;
+		&--modal{
+			width: 200px;
+			a{
+				color: #fff;
+			}
+			svg{
+				fill:#fff;
+			}
+		}
 	}
 	&__list-item{
 		margin-right: 10px;
+		list-style: none;
 	}
 	&__list-link{
 		padding: 10px;
@@ -33,6 +43,7 @@
 		height: 30px;
 		right: 0;
 		cursor: pointer;
+		list-style: none;
 		@include transitionF();
 		&--left{
 			left: 0;

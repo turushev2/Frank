@@ -4,13 +4,48 @@
 	background-color: #333333;
 	padding: 0px 30px;
 	text-align: center;
-	width: 26%;
+	// width: 850px;
 	left: 50%;
 	z-index: 10001;
 	transform: translateX(-50%);
-	h2{
+	top: 100px;
+	display: block;
+	// display: none;
+	&--calendar{
+		width: 700px;
+	}
+	&__background {
+		background-color: rgba(0,0,0,0.7); 
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10000;
+		display: none;
+	}
+	&__head-calendar{
+		@include separate();
+		margin-bottom: 15px;
+	}
+	&__stikers{
+		@include separate();
+		margin-bottom: 15px;
+	}
+	&__title{
 		position: relative;
 		text-align: center;
+	}
+	&__subtitle{
+		text-align: center;
+		font-weight: normal;
+	}
+	&__main {
+		text-align: left;
+		position: relative;
+		label{
+			margin-right: 10px;
+		}
 	}
 	&__main:after {
 		position: absolute;
@@ -21,13 +56,6 @@
 		content: "";
 		border-bottom: 2px solid #444444;
 	}
-	&__main {
-		text-align: left;
-		position: relative;
-		&--h3{
-			text-align: center;
-		}
-	}
 	&__main:before {
 		position: absolute;
 		width: 100%;
@@ -37,32 +65,41 @@
 		content: "";
 		border-bottom: 2px solid #444444;
 	}
-	&__main-name,
-	&__main-importance,
-	&__main-criterion,
-	&__main-deadline
-	 {
+	&__name,
+	&__importance,
+	&__criterion,
+	&__deadline {
 		display: flex;
     	justify-content: space-between;
     	margin-bottom: 15px;
+    	input[type="text"]{
+			border-color: transparent;
+    	}
 	}
-    	.deadline__day{
-    		width: 33px;
-    		
-    	}
-    	.deadline__month{
-    		width: 100px;
-    	}
-    	.deadline__year{
-    		width: 45px;
-    	}
-    	.deadline__month,
-    	.deadline__year,
-    	.deadline__day {
-    		text-align: center;
-    	}
-    .additionally{
+	&__importance-range{
+		width: 200px;
+	}
+	&__deadline-day{
+		width: 33px;
+		
+	}
+	&__deadline-month{
+		width: 100px;
+	}
+	&__deadline-year{
+		width: 45px;
+	}
+	&__deadline-month,
+	&__deadline-year,
+	&__deadlin-day {
+		text-align: center;
+	}
+    &__additionally-checkboxes{
     	text-align: left;
+    }
+    &__additionally-label{
+		display: block;
+		margin-bottom: 10px;
     }
     &__additionally:before{
     	position: absolute;
@@ -76,30 +113,15 @@
     &__additionally {
     	position: relative;
     }
-    &__ready {
+    &__submit {
     	padding-top: 15px;
-    	.ready{
-    	text-decoration: none;
-    	color: #FFF;
-    	padding: 10px 50px;
-    	background-color: #46cf8f;
-   	    border-radius: 10px;
-   	    display: inline-block;
-   	    }
-   	    p{
-   	    	margin:10px 0px;
-   	    }
+    	width: 200px;
+    	margin: 0 auto;
+    	color: #fff;
     }
-
-}
-.background {
- background-color: #000; 
-  height: 100%;
-  left: 0;
-  opacity: 0.50;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
+    &__timer-checkbox{
+    	margin: 10px 0px;
+    	display: inline-block;
+    }
 
 }

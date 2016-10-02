@@ -3,10 +3,10 @@
     margin-bottom: 30px;
 	background-color: #FFF;
 	width: 100%;
-	min-height: 500px;
+	// min-height: 500px;
 	position: relative;
-	overflow-y: scroll;
-	max-height: 666px;
+	// overflow-y: scroll;
+	// max-height: 666px;
 	&__stikers{
 		padding-left: 0;
 		&--item {
@@ -48,21 +48,22 @@
 			color: #000;
 			text-decoration: none;
 			display: block;	
-	}
-		
-}}
-.more{
+	}		
+  }
+  &__more{
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 30px;	
-		a{
-			background-color: #535353;
-			color: #fff;
-			padding: 10px 35px;		
-        	border-radius: 15px;
-			font-size: 14px;
-			text-decoration: none;
-			
+		bottom: 12px;	
+		background-color: #535353;
+		color: #fff;
+		padding: 10px 35px;		
+		border-radius: 15px;
+		font-size: 14px;
+		text-decoration: none;
+		@include transition();
+		&:hover{
+			bottom: 5px;
 		}
 	}
+}

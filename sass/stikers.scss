@@ -1,75 +1,99 @@
 .stikers {
 	display: flex;
-	justify-content: space-around;
+	// justify-content: space-around;
 	padding-top: 15px;
 	flex-wrap: wrap;
-	&__h2 {
+	margin: 0 auto;
+	width: 100%;
+	&__title {
 		text-align: center;
-		font-size: 20px;
+		font-size: 18px;
+		margin-bottom: 5px;
+		margin-top: 20px;
 	}
 	&__element:nth-child(3n){
-		margin-right: 30px;
+		margin-right: 60px;
+		
 	}
 	&__element:nth-child(3n+1) {
-		margin-left: 30px;
+		margin-left: 60px;
+		
 	}
 	&__element {
+		display: flex;
+		flex-direction: column;
 	    margin-bottom: 45px;
-	    margin-right: 45px;
+	    margin-right: 107px;
 		position: relative;
-		border: 1px solid;
+		border: 1px solid #f0f0f0;
+		background-color: #fff;
+		color: #000;
+		width: 180px;
+		padding: 0 10px;
 		@include Hshadow();
-		&--default {
-			@include shadow();
-			border-radius: 2px;
-			position: absolute;
-		    width: 120%;
-    		left: -10%;
-    		font-size: 14px;
-    		top: -7%;
-    		color: #fff;
-    		p {
-				margin-top: 5px;
-    			margin-bottom: 5px;
-    			text-align: center;
-    		}
-
+		@include transition();
+		&:hover{
+			// @include Lscale();
+			cursor: pointer;
+			// -webkit-backface-visibility: hidden;
+			// -webkit-transform-style: preserve-3d;
 		}
-		&--content{
-			color: #000;
+		&--modal{
 			width: 180px;
-			    padding: 0px 10px 0px 10px;
-			p{
-				margin-top: 10px;
-				margin-bottom: 15px;
-				font-size: 14px;
+			margin-right: 47px;
+			text-align: left;
+			margin-bottom: 20px;
+			&:nth-child(3n+1){
+				margin-left: 0;
+			}
+			&:nth-child(3n){
+				margin-right: 0;
 			}
 		}
 	}
-	.default-color-1{
-		background-color: #cc0000;
+	&__attribute-wrapper{
+		flex-grow: 1;
 	}
-	.default-color-2{
-		background-color: #46cf8f;
+	&__attribute{
+		margin-bottom: 10px;
+		font-size: 14px;
+		font-family: Serif;
+		&:last-of-type{
+			margin-bottom: 35px;
+		}
 	}
-	.complete {
-		text-align: center;
-		display: block;
-    	padding: 10px;
-   		background-color:#46cf8f;
-    	border-radius: 10px;
-    	color: #fff;
-    	text-decoration: none;
-	}
-	.timer {
-		text-align: center;
+	&__alert {
+		@include shadow();
+		position: absolute;
+	    width: 120%;
+		left: -10%;
+		font-size: 14px;
+		top: -7%;
+		color: #fff;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin: 0;
+		text-align: center;	
+		&--red{
+			background-color: $red;
+		}
+		&--green{
+			background-color: $green;
+		}
+		&--modal{
+			width: 160px;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -5%;
+			box-shadow: 0px 2px 3px 0.25px rgba(0, 0, 0, 0.5);
+		}
 	}
 }
-.stiker--small {
-	background-color: #FFF;
-	color: #000;
-	margin-right: 40px;
-}
-.stiker--small:nth-child(3n){
-	margin-right: 0;
-}
+// .stiker--small {
+// 	background-color: #FFF;
+// 	color: #000;
+// 	margin-right: 40px;
+// }
+// .stiker--small:nth-child(3n){
+// 	margin-right: 0;
+// }

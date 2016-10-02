@@ -5,9 +5,21 @@
 @mixin Hshadow(){
 	box-shadow: 0px 10px 10px 0.25px rgba(0, 0, 0, 0.5);
 }
-
+@mixin Lshadow(){
+	box-shadow: 0px 2px 3px 0.25px rgba(0, 0, 0, 0.5);
+}
+@mixin BTNshadow($color){
+	box-shadow:0px 2px 0px 0.25px darken($color, 5%);
+}
+@mixin separate(){
+	border-bottom: 1px solid #1b1b1b;
+	box-shadow: 0px 1px 0px #444;
+}
 @mixin scale(){
 	transform:scale(1.1);
+}
+@mixin Lscale(){
+	transform:scale(1.05);
 }
 @mixin transition(){
 	transition:all 0.3s ease;

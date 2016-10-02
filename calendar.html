@@ -26,9 +26,9 @@
           <li class="months__list-item"><a href="#" class="months__list-link">Август</a></li>
           <li class="months__control">
             <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
-              <g>
-                <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
-              </g>
+                <g>
+                  <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+                </g>
             </svg>
           </li>
           <li class="months__control months__control--left">
@@ -41,7 +41,6 @@
         </ul>      
       </nav>
       <table class="calendar"> 
-        <div class="calendar__day-modal"></div>
         <tr class="calendar__title-row">
           <th class="calendar__title-cell">Понедельник</th>
           <th class="calendar__title-cell">Вторник</th>
@@ -204,53 +203,67 @@
         </tr>
       </table>
     </div>
-    <div class="modal-calendar">
-      <div class="modal-calendar__head">
-         <nav class="months">
-        <ul class="months__list">
-          <li class="months__list-item"><a href="#" class="months__list-link active">2 Июля</a></li>
-          <li class="months__control">
-            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
-              <g>
-                <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
-              </g>
-            </svg>
-          </li>
-          <li class="months__control months__control--left">
-            <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
-            <g>
-              <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
-            </g>
-            </svg>
-          </li>
-        </ul>      
-      </nav>
+    <div class="modal__background">
+      <div class="modal modal--calendar">
+        <div class="modal__head-calendar">
+          <nav class="months">
+            <ul class="months__list months__list--modal">
+              <li class="months__list-item"><a href="#" class="months__list-link active">2 Июля</a></li>
+              <li class="months__control">
+                <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+                  <g>
+                    <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+                  </g>
+                </svg>
+              </li>
+              <li class="months__control months__control--left">
+                <svg class = "months__control-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+                <g>
+                  <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5   c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z   "/>
+                </g>
+                </svg>
+              </li>
+            </ul>      
+          </nav>
+        </div>
+        <div class="modal__stikers">
+          <div class="stikers ">
+              <div class="stikers__element stikers__element--modal">
+                <p class ="stikers__alert stikers__alert--red stikers__alert--modal">5 минут</p>
+                <h2 class="stikers__title">Покончить с собой</h2>
+                <div class="stikers__attribute-wrapper">
+                  <p class = "stikers__attribute">Цель:Слиться с космосом</p>
+                  <p class = "stikers__attribute">Дедлаин: 18.09.2015</p>
+                  <p class = "stikers__attribute">Важность: 5</p>
+                </div>
+                <a href="" class="btn">Выполнить</a>
+                <label class="btn btn--checkbox"><input type="checkbox"> Запустить таймер</label>
+              </div>
+              <div class="stikers__element stikers__element--modal">
+                <p class ="stikers__alert stikers__alert--red stikers__alert--modal">5 минут</p>
+                <h2 class="stikers__title">Покончить с собой</h2>
+                <div class="stikers__attribute-wrapper">
+                  <p class = "stikers__attribute">Цель:Слиться с космосом</p>
+                  <p class = "stikers__attribute">Дедлаин: 18.09.2015</p>
+                  <p class = "stikers__attribute">Важность: 5</p>
+                </div>
+                <a href="" class="btn">Выполнить</a>
+                <label class="btn btn--checkbox"><input type="checkbox"> Запустить таймер</label>
+              </div>
+              <div class="stikers__element stikers__element--modal">
+                <p class ="stikers__alert stikers__alert--red stikers__alert--modal">5 минут</p>
+                <h2 class="stikers__title">Покончить с собой</h2>
+                <div class="stikers__attribute-wrapper">
+                  <p class = "stikers__attribute">Цель:Слиться с космосом</p>
+                  <p class = "stikers__attribute">Дедлаин: 18.09.2015</p>
+                  <p class = "stikers__attribute">Важность: 5</p>
+                </div>
+                <a href="" class="btn">Выполнить</a>
+                <label class="btn btn--checkbox"><input type="checkbox"> Запустить таймер</label>
+              </div>     
+            </div>
+        </div>
       </div>
-      <div class="modal-calendar__stiker">
-        <div class="stiker--small">
-          <h2 class="stikers__h2">Покончить с собой</h2>
-          <p>Цель:Слиться с космосом</p>
-          <p>Дедлаин: 18.09.2015</p>
-          <p>Важность: 5</p>
-          <a href="" class="complete">Выполнить</a>
-        </div>
-        <div class="stiker--small">
-          <h2 class="stikers__h2">Покончить с собой</h2>
-          <p>Цель:Слиться с космосом</p>
-          <p>Дедлаин: 18.09.2015</p>
-          <p>Важность: 5</p>
-          <a href="" class="complete">Выполнить</a>
-        </div>
-        <div class="stiker--small">
-          <h2 class="stikers__h2">Покончить с собой</h2>
-          <p>Цель:Слиться с космосом</p>
-          <p>Дедлаин: 18.09.2015</p>
-          <p>Важность: 5</p>
-          <a href="" class="complete">Выполнить</a>
-        </div>
-      </div>
-    </div>
-    <div class="background">
     </div>
   </main>
   <footer class="page-footer">
