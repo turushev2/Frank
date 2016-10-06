@@ -5,7 +5,99 @@
 	flex-wrap: wrap;
 	&__wall {
 		border:1px solid black;
-		width: 80%;
+		width: 77%;
+	    margin-bottom: 40px;
+	    color: #000;
+	    padding-left: 15px;
+    	box-sizing: border-box;
+    	padding-right: 15px;
+	}
+	&__wall-item{
+		border-bottom: 1px solid;
+		margin-bottom: 10px;
+	}
+	&__wall-item-head{
+		display: inline-block;
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+	&__wall-link{
+		float: right;
+		display: inline-block;
+		margin-top: 15px;
+	}
+	&__item-img{
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__item-content{
+		margin-bottom: 5px;
+	}
+	&__item-time{
+		margin-top: 0;
+		color: #333333;
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	&__wall-link-item{
+		margin-right: 5px;
+	}
+	&__sidebar-element{
+		color: #000;
+	}
+	&__sidebar-goals {
+		border:1px solid #313131;
+		padding: 3px;
+		border-radius: 5px;
+	}
+	&__goals-title{
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	&__goals-title:before,
+	&__goals-title:after{
+		content:"";
+		height: 15px;
+		width: 15px;
+		position: absolute;
+		cursor: pointer;
+		border-left: 2px solid #000;
+		border-bottom: 2px solid #000;
+	}
+	&__goals-content{
+		margin-top: 10px;
+	}
+	&__goals-title:before {
+		transform: rotate(50deg);
+		left:2px;
+		top: 0%;
+	}
+	&__goals-title:after {
+	    transform: rotate(-137deg);
+	    top: 0%;
+	    right: 2px;
+	}
+	// Hover не работает с псевдожлементми
+	
+	// &__goals-title:before:hover,
+	// &__goals-title:after:hover{
+	// 	border-left: 2px solid #f1c40f;
+	// 	border-bottom: 2px solid #f1c40f;
+	// }
+	&__sidebar-subscribers {
+		border:1px solid #313131;		
+		padding: 10px;
+		border-radius: 5px;
+		.subscribers {
+			display: inline-flex;
+			font-size: 12px;
+			margin-bottom: 5px;
+		}	
+		.action {
+			font-size: 14px;
+			font-weight: bold;
+		}
 	}
 	&__sidebar{
 		border-top:1px solid #313131;
@@ -15,65 +107,46 @@
 		width: 17%;
 		text-align: center;
 		margin-right: 15px;
-		&__element{
-			color: #000;
-			
-		}
-		&__element-subscribers{
-			border:1px solid #313131;		
-			padding: 10px;
-		    border-radius: 5px;
-			.subscribers {
-				display: inline-flex;
-				font-size: 12px;
-				margin-bottom: 5px;
-			}	
-			.action {
-				font-size: 14px;
-				font-weight: bold;
-			}
-		}
-		&__element-goals{
-			border:1px solid #313131;
-			padding: 3px;
-			border-radius: 5px;
-		}
-		&__element-subscription{
-			border:1px solid #313131;		
-			padding: 10px;
-		    border-radius: 5px;
-		    display: flex;
-		    flex-wrap: wrap;
-		    p{
-		    	font-size: 12px;
-		    }
-		    .subscription{
-		    	width: 50%;
-		    }
-		}
+		margin-bottom: 40px;
+	}
+	&__sidebar-subscription{
+		border:1px solid #313131;		
+		padding: 10px;
+	    border-radius: 5px;
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	&__subscription-name{
+		font-size: 12px;
+	}
+	&__subscription-item {
+		width: 50%;
 	}
 	&__information {
 		display: flex;
 		width: 100%;
 		margin-bottom: 10px;
-		&--page-avatar{
-			text-align: center;
-		}
-		&--general {
-			color:black;
-		}
-		&--attribute {
-			margin-bottom: 10px;
-			margin-top: 10px;
-			font-weight: bold;
-		}
-		&--avatar{
-			display: block;
-			margin-bottom: 10px;
-		}
 	}
-}
-.status {
-	font-size: 16px;
-	color: #7e7e7e;
+	&__information-attribute{
+		margin-bottom: 10px;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+	&__information-page-avatar{
+		text-align: center;
+	}
+	&__information-general{
+		color: #000;
+	}
+	&__information-img-avatar{
+		display: block;
+		margin-bottom: 10px;
+	}
+	&__information-name{
+		
+	}
+	&__status {
+		font-size: 16px;
+		color: #7e7e7e;
+	}
 }
