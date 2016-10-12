@@ -1,5 +1,4 @@
 .modal {
-	@include shadow();
 	position: fixed;
 	background-color: #333333;
 	padding: 0px 30px;
@@ -22,7 +21,31 @@
 		top: 0;
 		width: 100%;
 		z-index: 10000;
-		display: none;
+		
+	}
+	&__notes-header{
+		display:flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	&__h3{
+		margin: 0;
+		font-size: 20px;
+	}
+	&__notes-tool {
+		background-color: #FFF;
+		color: #000;
+	}
+	&__notes-window {
+		background-color: #FFF;
+		color: #000;
+		padding:30px 15px 20px 30px;
+	}
+	&__notes-h{
+		margin-top: 0;		
+	}
+	&__notes-content{	
+		margin-bottom: 10px;
 	}
 	&__head-calendar{
 		@include separate();
@@ -124,4 +147,16 @@
     	display: inline-block;
     }
 
+}
+.general__notes {
+	.modal {
+		background-color:transparent;
+		text-align: left;
+	}
+
+}
+.general__planning{
+	.modal {
+		@include shadow();
+	}
 }

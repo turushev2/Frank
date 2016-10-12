@@ -54,6 +54,12 @@
 	&__attribute-wrapper{
 		flex-grow: 1;
 	}
+	&__attribute-close{
+		position: absolute;
+		content:"";
+		top: 5px;
+		right: 5px;
+	}
 	&__attribute{
 		margin-bottom: 10px;
 		font-size: 14px;

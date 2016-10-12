@@ -33,5 +33,13 @@
 		padding: 5px 10px;
 		margin-bottom: 10px;
 	}
+	&--complete {
+		padding: 10px 30px;
+		display: inline-block;
+		font-size: 20px;
+	}
 	
+}
+.modal__notes-window {
+	.btn{text-align: left;font-size: 14px;}
 }

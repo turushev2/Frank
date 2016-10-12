@@ -3,7 +3,7 @@
     margin-bottom: 30px;
 	background-color: #FFF;
 	width: 100%;
-	// min-height: 500px;
+	min-height: 500px;
 	position: relative;
 	// overflow-y: scroll;
 	// max-height: 666px;
@@ -18,6 +18,7 @@
 			}
 		}
 	}
+	
 	&__controls {
 		margin-bottom: 30px;
 		text-align: center;
@@ -65,5 +66,18 @@
 		&:hover{
 			bottom: 5px;
 		}
+	}
+}
+.general__notes {
+	.stikers__attribute-data {
+		margin-top: 0;
+		text-align: center;
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.stikers__attribute{
+		margin-bottom: 10px;
+		margin-top: 0;
+		text-align: center;
 	}
 }
