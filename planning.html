@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank planning</title>
   <link rel="stylesheet" href="css/style.css">
 
@@ -12,6 +13,45 @@
       <h2 class ="frank-title__name">Планирование</h2>
  </div>
   <main class="container ">
+    <div class="modal__background">
+      <form class="modal">
+        <h2 class="modal__title">Постановка цели</h2>
+        <div class="modal__main">
+          <h3 class="modal__subtitle">Основное</h3>
+          <div class="modal__name">
+            <label for="name">Название</label>
+            <input type="text" name="name" placeholder="Например: Купить рейтузы">
+          </div>
+          <div class="modal__deadline">  
+            <label for="deadline">Дедлайн</label>
+            <div class="modal__deadline-time">
+              <input type="text" name="deadline" class="modal__deadline-day" placeholder="1">
+              <input type="text" name="deadline" class="modal__deadline-month" placeholder="Сентябрь">
+              <input type="text" name="deadline" class="modal__deadline-year" placeholder="1995">
+            </div>
+          </div>
+          <div class="modal__importance">
+            <label for="importance">Важность</label>
+            <input class = "modal__importance-range" type="range" name="importance">
+          </div>
+          <div class="modal__criterion">
+            <label for="criterion">Критерии оценки</label>
+            <input type="text" name="criterion" placeholder="Например: Жопка в тепле">
+          </div>
+        </div>
+        <div class="modal__additionally">
+          <h3 class = "modal__subtitle">Дополнительно</h3>
+          <div class="modal__additionally-checkboxes">
+            <label class="modal__additionally-label"><input type="checkbox"> Опубликовать</label>
+            <label class="modal__additionally-label"><input type="checkbox"> Отображать в профиле</label>
+          </div>
+        </div>
+        <div class="modal__submit">
+          <button type="submit" href="" class="btn">Готово</button type="submit">
+          <label class="modal__timer-checkbox"><input type="checkbox"> Разбить на подцепи</label>
+        </div>
+      </form>   
+    </div>
     <div class="add-sticker">
         <a href="" class="add-sticker__plus"></a>
     </div>
@@ -19,6 +59,14 @@
         <a href="" class="setting__nut"></a>
     </div>
      <div class="menu-main">
+         <a href="" class="menu-main__burger">
+           <span class="menu-main__burger-icon">
+             <span class="menu-main__burger-line"></span>
+             <span class="menu-main__burger-line"></span>
+             <span class="menu-main__burger-line"></span>
+           </span>
+           <span class="menu-main__burger-sign">Меню</span>    
+         </a>
          <a href="profile.html" class="menu-main__item menu-main--profile">Профиль</a>
          <a href="events.html" class="menu-main__item menu-main--events">События</a>
          <a href="notes.html" class="menu-main__item menu-main--notes">Заметки</a>
@@ -26,6 +74,10 @@
          <a href="planning.html" class="menu-main__item menu-main--planning">Планирование</a>
       </div>
     <div class="main-window">
+      <div class="main-window__control-mobile">
+        <div class="main-window__control-mobile-arrow"></div>
+        <span class="main-window__control-mobile-sign">Задачи</span>
+      </div>
       <ul class="main-window__controls">
         <li class="main-window__controls--item active">
           <a href="#" class="main-window__controls--link">
@@ -166,45 +218,6 @@
       </ul>
     </div>
     <a href="" class="main-window__more">Показать больше</a>
-    <div class="modal__background">
-      <form class="modal">
-        <h2 class="modal__title">Постановка цели</h2>
-        <div class="modal__main">
-          <h3 class="modal__subtitle">Основное</h3>
-          <div class="modal__name">
-            <label for="name">Название</label>
-            <input type="text" name="name">
-          </div>
-          <div class="modal__deadline">  
-            <label for="deadline">Дедлайн</label>
-            <div class="modal__deadline-time">
-              <input type="text" name="deadline" class="modal__deadline-day" placeholder="1">
-              <input type="text" name="deadline" class="modal__deadline-month" placeholder="Сентябрь">
-              <input type="text" name="deadline" class="modal__deadline-year" placeholder="1995">
-            </div>
-          </div>
-          <div class="modal__importance">
-            <label for="importance">Важность</label>
-            <input class = "modal__importance-range" type="range" name="importance">
-          </div>
-          <div class="modal__criterion">
-            <label for="criterion">Критерии оценки</label>
-            <input type="text" name="criterion">
-          </div>
-        </div>
-        <div class="modal__additionally">
-          <h3 class = "modal__subtitle">Дополнительно</h3>
-          <div class="modal__additionally-checkboxes">
-            <label class="modal__additionally-label"><input type="checkbox"> Опубликовать</label>
-            <label class="modal__additionally-label"><input type="checkbox"> Отображать в профиле</label>
-          </div>
-        </div>
-        <div class="modal__submit">
-          <a href="" class="btn">Готово</a>
-          <label class="modal__timer-checkbox"><input type="checkbox"> Разбить на подцепи</label>
-        </div>
-      </form>
-    </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__frank">

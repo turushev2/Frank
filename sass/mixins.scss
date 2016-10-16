@@ -24,6 +24,132 @@
 @mixin transition(){
 	transition:all 0.3s ease;
 }
+@mixin transitionCustom($time){
+	transition:all $time ease;
+}
 @mixin transitionF(){
 	transition:all 0.15s ease;
+}
+
+@mixin colorPlaceholder($code){
+	&::-webkit-input-placeholder       {color:$code;}
+	&::-moz-placeholder                {color:$code;}
+	&:-moz-placeholder                 {color:$code;}
+	&:-ms-input-placeholder            {color:$code;}
+}
+@mixin fontSizePlaceholder($code){
+	&::-webkit-input-placeholder       {font-size:$code;}
+	&::-moz-placeholder                {font-size:$code;}
+	&:-moz-placeholder                 {font-size:$code;}
+	&:-ms-input-placeholder            {font-size:$code;}
+}
+@mixin placeholderFadeOut($time){
+	&::-webkit-input-placeholder       {text-indent: 200px;@include transitionCustom($time);}
+	&::-moz-placeholder                {color:transparent;@include transition();}
+	&:-moz-placeholder                 {color:transparent;@include transition();}
+	&:-ms-input-placeholder            {color:transparent;@include transition();}
+}
+
+
+
+
+
+
+/*Для стилизации бегунка*/
+@mixin shadowRange($shadow-size, $shadow-blur, $shadow-color) {
+	  box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
+	}
+
+	@mixin track() {
+	  width: $track-width;
+	  height: $track-height;
+	  cursor: pointer;
+	  transition: all .2s ease;
+	}
+
+	@mixin thumb() {
+	  @include shadowRange($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+	  border: $thumb-border-width solid $thumb-border-color;
+	  height: $thumb-height;
+	  width: $thumb-width;
+	  border-radius: $thumb-radius;
+	  background: $thumb-color;
+	  cursor: pointer;
+	}
+
+/*Тут конец*/
+
+@mixin styleRange(){
+	
+	  -webkit-appearance: none;
+	  margin: $thumb-height / 2 0;
+	  width: $track-width;
+
+	  &:focus {
+	    outline: none;
+	  }
+
+	  &::-webkit-slider-runnable-track {
+	    @include track();
+	    @include shadowRange($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+	    background: $track-color;
+	    border: $track-border-width solid $track-border-color;
+	    border-radius: $track-radius;
+	  }
+
+	  &::-webkit-slider-thumb {
+	    @include thumb();
+	    -webkit-appearance: none;
+	    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+	  }
+
+	  &:focus::-webkit-slider-runnable-track {
+	    background: lighten($track-color, $contrast);
+	  }
+
+	  &::-moz-range-track {
+	    @include track();
+	    @include shadowRange($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+	    background: $track-color;
+	    border: $track-border-width solid $track-border-color;
+	    border-radius: $track-radius;
+	  }
+
+	  &::-moz-range-thumb {
+	    @include thumb();
+	  }
+
+	  &::-ms-track {
+	    @include track();
+	    background: transparent;
+	    border-color: transparent;
+	    border-width: $thumb-width 0;
+	    color: transparent;
+	  }
+
+	  &::-ms-fill-lower {
+	    @include shadowRange($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+	    background: darken($track-color, $contrast);
+	    border: $track-border-width solid $track-border-color;
+	    border-radius: $track-radius * 2;
+	  }
+
+	  &::-ms-fill-upper {
+	    @include shadowRange($track-shadow-size, $track-shadow-blur, $track-shadow-color);
+	    background: $track-color;
+	    border: $track-border-width solid $track-border-color;
+	    border-radius: $track-radius * 2;
+	  }
+
+	  &::-ms-thumb {
+	    @include thumb();
+	  }
+
+	  &:focus::-ms-fill-lower {
+	    background: $track-color;
+	  }
+
+	  &:focus::-ms-fill-upper {
+	    background: lighten($track-color, $contrast);
+	  }
 }

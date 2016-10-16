@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank events</title>
   <link rel="stylesheet" href="css/style.css">
 
@@ -12,6 +13,45 @@
       <h2 class ="frank-title__name">События</h2>
  </div>
   <main class="container">
+  <div class="modal__background">
+      <form class="modal">
+        <h2 class="modal__title">Постановка цели</h2>
+        <div class="modal__main">
+          <h3 class="modal__subtitle">Основное</h3>
+          <div class="modal__name">
+            <label for="name">Название</label>
+            <input type="text" name="name" placeholder="Например: Купить рейтузы">
+          </div>
+          <div class="modal__deadline">  
+            <label for="deadline">Дедлайн</label>
+            <div class="modal__deadline-time">
+              <input type="text" name="deadline" class="modal__deadline-day" placeholder="1">
+              <input type="text" name="deadline" class="modal__deadline-month" placeholder="Сентябрь">
+              <input type="text" name="deadline" class="modal__deadline-year" placeholder="1995">
+            </div>
+          </div>
+          <div class="modal__importance">
+            <label for="importance">Важность</label>
+            <input class = "modal__importance-range" type="range" name="importance">
+          </div>
+          <div class="modal__criterion">
+            <label for="criterion">Критерии оценки</label>
+            <input type="text" name="criterion" placeholder="Например: Жопка в тепле">
+          </div>
+        </div>
+        <div class="modal__additionally">
+          <h3 class = "modal__subtitle">Дополнительно</h3>
+          <div class="modal__additionally-checkboxes">
+            <label class="modal__additionally-label"><input type="checkbox"> Опубликовать</label>
+            <label class="modal__additionally-label"><input type="checkbox"> Отображать в профиле</label>
+          </div>
+        </div>
+        <div class="modal__submit">
+          <button type="submit" href="" class="btn">Готово</button type="submit">
+          <label class="modal__timer-checkbox"><input type="checkbox"> Разбить на подцепи</label>
+        </div>
+      </form>   
+    </div>
   <div class="add-sticker">
         <a href="" class="add-sticker__plus"></a>
   </div>

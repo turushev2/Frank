@@ -11,20 +11,23 @@ var notify = require("gulp-notify");
 var uncss = require('gulp-uncss');
 var browserSync = require('browser-sync').create();
 
+gulp.task('sass', function () {
+  gulp.src('./sass/**/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(notify("Всё готово, Хозяин!"));
+});
 // Static server
-gulp.task('browser-sync', function() {
+ gulp.task('serve', function () {
+
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-});
- 
-gulp.task('sass', function () {
-  gulp.src('./sass/**/style.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'))
-    .pipe(notify("Всё готово, Хозяин!"));
+    gulp.watch('./sass/**/*.scss', ['sass',]);
+    gulp.watch('./**/*.html').on('change',browserSync.reload);
 });
 
 gulp.task('build:css', function () {
@@ -57,8 +60,4 @@ gulp.task('build:js', function () {
    .pipe(gulp.dest('../prod/js/script.js'));    
 });
 
-
- 
-gulp.task('watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
-});
+gulp.task('default', ['sass','serve']);

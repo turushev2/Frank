@@ -1,15 +1,21 @@
 .add-sticker {
     &__plus {
+	@media ($mobile){
+		position: fixed;
+		top: 10px;
+		z-index: 9;
+		right: -15px;
+	}
     position: absolute;
 	top: 10px;
 	background-color: #43b05c;
 	height: 50px;
 	width: 50px;
-	right: 20px;
+	right: 10px;
 	content: "";
 	background-image: url(../img/plus.svg);
     background-size: contain;
     border-radius: 100%;
-    z-index: 999;
+    z-index: 8;
     }
 }

@@ -4,7 +4,42 @@ $yellow : #f1c40f;
 $red    : #e74c3c;
 $blue   : #009ee0;
 $gray   : #aaaaaa;
+$gray-dark   : #3c3c3c;
+$orange : #e95d0f;
  
 $menu-blocks: #2c3e50;
 
 $container: 940px;
+
+// $tablet-max: 1040px;
+// $mobile-max: 740px;
+$mobile:"max-width:740px";
+$tablet:"max-width:1040px";
+
+
+/*Для стилизации бегунка*/
+
+$track-color: #424242 !default;
+$thumb-color: #2ecc71 !default;
+
+$thumb-radius: 50% !default;
+$thumb-height: 18px !default;
+$thumb-width: 18px !default;
+$thumb-shadow-size: 0px !default;
+$thumb-shadow-blur: 0px !default;
+$thumb-shadow-color: transparent !default;
+$thumb-border-width: 0px !default;
+$thumb-border-color: transparent !default;
+
+$track-width: 200px !default;
+$track-height: 5px !default;
+$track-shadow-size: 2px !default;
+$track-shadow-blur: 2px !default;
+$track-shadow-color: #222 !default;
+$track-border-width: 1px !default;
+$track-border-color: transparent !default;
+
+$track-radius: 5px !default;
+$contrast: 5% !default;
+
+/*Тут конец*/

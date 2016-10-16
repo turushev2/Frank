@@ -9,6 +9,13 @@
 	align-items: center;
 	padding: 0 35px;
 	box-sizing: border-box;
+	@media ($tablet){
+		width: 85%;
+	}
+	@media ($mobile){
+		width: 100%;
+		flex-direction: column;
+	}
 	@include shadow();
 	&__frank{
 		height: 150px;
@@ -16,6 +23,9 @@
 		position: absolute;
 		bottom: -5px;
 		left: -50px;
+		@media ($mobile){
+			left: 0;
+		}
 		img{
 			width: 100%;
 		}
@@ -26,20 +36,40 @@
 		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: center;
+		@media ($mobile){
+			margin-right: 0;
+			margin-bottom: 10xp;
+		}
 	}
 	&__status-text{
 		font-size: 24px;
 		margin: 0;
 		margin-bottom: 5px;
+		@media ($tablet){
+			font-size: 20px;
+		}
 	}
 	&__progress-bar{
 		width: 250px;
 		height: 20px;
 		border: 1px solid #b5b5b5;
+		@media ($tablet){
+			width: 200px;
+			height: 15px;
+		}
 	}
 	&__complete{
 		background-color: $green;
 		width: 220px;
 		height: 20px;
+		@media ($tablet){
+			width: 200px;
+			height: 15px;
+		}
+	}
+	&__lvl{
+		@media($mobile){
+			margin-bottom: 10px;
+		}
 	}
 }

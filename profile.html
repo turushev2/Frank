@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frank profile</title>
   <link rel="stylesheet" href="css/style.css">
 
@@ -12,19 +13,28 @@
       <h2 class ="frank-title__name">Профиль</h2>
  </div>
   <main class="container">
-  <div class="menu-main">
-   <a href="profile.html" class="menu-main__item menu-main--profile">Профиль</a>
-   <a href="events.html" class="menu-main__item menu-main--events">События</a>
-   <a href="notes.html" class="menu-main__item menu-main--notes">Заметки</a>
-   <a href="calendar.html" class="menu-main__item menu-main--calendar">Календарь</a>
-   <a href="planning.html" class="menu-main__item menu-main--planning">Планирование</a>
-  </div>
+   <div class="menu-main">
+         <a href="" class="menu-main__burger">
+           <span class="menu-main__burger-icon">
+             <span class="menu-main__burger-line"></span>
+             <span class="menu-main__burger-line"></span>
+             <span class="menu-main__burger-line"></span>
+           </span>
+           <span class="menu-main__burger-sign">Меню</span>    
+         </a>
+         <a href="profile.html" class="menu-main__item menu-main--profile">Профиль</a>
+         <a href="events.html" class="menu-main__item menu-main--events">События</a>
+         <a href="notes.html" class="menu-main__item menu-main--notes">Заметки</a>
+         <a href="calendar.html" class="menu-main__item menu-main--calendar">Календарь</a>
+         <a href="planning.html" class="menu-main__item menu-main--planning">Планирование</a>
+      </div>
   <div class="main-window">
     <div class="profile">
       <div class="profile__information">
         <div class="profile__information-page-avatar">
           <img class="profile__information-img-avatar" src="img/avatar.jpg" alt="">
           <a href="" class="btn btn--subscribe">Вы подписаны</a>
+          <a href="" class="btn--more">Подробнее</a>
         </div>
         <div class="profile__information-general">
           <h2 class="profile__information-name">Петя дудочкин <span class="profile__status">Занят</span></h2>
@@ -47,17 +57,17 @@
           <h3>Подписчики</h3>
           <div class="profile__sidebar-subscribers">
             <div class="subscribers">
-              <img src="img/subscribers.jpg" alt="">
+              <img src="img/subscribers.png" alt="">
               <p>Николай <span class="action">Тунеядец</span>
               </p>
             </div>
             <div class="subscribers">
-              <img src="img/subscribers.jpg" alt="">
+              <img src="img/subscribers.png" alt="">
               <p>Николай <span class="action">Тунеядец</span>
               </p>
             </div>
             <div class="subscribers">
-              <img src="img/subscribers.jpg" alt="">
+              <img src="img/subscribers.png" alt="">
               <p>Николай <span class="action">Тунеядец</span>
               </p>
             </div>
@@ -67,19 +77,19 @@
           <h3>Подписки</h3>
           <div class="profile__sidebar-subscription">
             <div class="profile__subscription-item">
-              <img src="img/subscribers-2.jpg" alt="">
+              <img src="img/subscribers-2.png" alt="">
               <p class="profile__subscription-name">Виталий</p>
             </div>
              <div class="profile__subscription-item">
-              <img src="img/subscribers-2.jpg" alt="">
+              <img src="img/subscribers-2.png" alt="">
               <p class="profile__subscription-name">Виталий</p>
             </div>
             <div class="profile__subscription-item">
-              <img src="img/subscribers-2.jpg" alt="">
+              <img src="img/subscribers-2.png" alt="">
               <p class="profile__subscription-name">Виталий</p>
             </div>
             <div class="profile__subscription-item">
-              <img src="img/subscribers-2.jpg" alt="">
+              <img src="img/subscribers-2.png" alt="">
               <p class="profile__subscription-name">Виталий</p>
             </div>
           </div>
@@ -87,16 +97,14 @@
       </div>
       <div class="profile__wall">
         <div class="profile__wall-item">
-          <h2 class="profile__wall-item-head">Цель 1 выполнена!</h2>
+          <div class="profile__wall-item-content">
+             <h2 class="profile__wall-item-head">Цель 1 выполнена!</h2>
           <div class="profile__wall-link">
             <a href="" class="profile__wall-link-item">
-              <img src="img/edit.png" alt="">
+              <img src="img/edit.svg" alt="">
             </a>
             <a href="" class="profile__wall-link-item">
-              <img src="img/edit.png" alt="">
-            </a>
-            <a href="" class="profile__wall-link-item">
-              <img src="img/close.png" alt="">
+              <img src="img/close.svg" alt="">
             </a>
           </div>
           <p class="profile__item-time">12.09.2015 14:23</p>
@@ -105,6 +113,18 @@
           </p>
           <img src="img/goals-img.jpg" alt="" class="profile__item-img">
           <a href="" class="btn btn--comment">Комментировать</a>
+          </div>
+          <div class="profile__wall-item-comment">
+            <div class="profile__comment-info">
+              <img src="img/avatar.jpg" alt="" class="profile__comment-author-avatar">
+              <div class="profile__info-block">
+                <p class="profile__comment-author-name">Василий</p>
+                <p class="profile__comment-time">12/10/2016 в 17:32</p>
+              </div>
+            </div>
+            <div class="profile__comment-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptate nam voluptatem, nulla iste, aliquid! Architecto ut, vel temporibus ipsa consequuntur necessitatibus dolores incidunt totam ea, ducimus cupiditate soluta excepturi.</div>
+            <a href="" class="btn btn--comment">Ответить</a>
+          </div>
         </div>
       </div>
     </div>

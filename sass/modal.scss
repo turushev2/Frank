@@ -1,25 +1,44 @@
 .modal {
-	position: fixed;
+	@include shadow();
+	position:absolute;
 	background-color: #333333;
 	padding: 0px 30px;
+	padding-bottom: 15px;
 	text-align: center;
-	// width: 850px;
 	left: 50%;
 	z-index: 10001;
 	transform: translateX(-50%);
-	top: 100px;
-	display: block;
-	// display: none;
+	margin-bottom: 50px;
+	border: 1px solid $gray-dark;
+	top: -1000px;
+	@media ($mobile){
+		width: 320px;
+		box-sizing: border-box;
+	}
+	@include transitionCustom(1s);
+	&__background {
+		background-color: rgba(0,0,0,0.9);
+		height: 100%;
+		left: 0;
+		position:fixed;
+		overflow-y: scroll;
+		top: 0;
+		width: 100%;
+		height: 0vh;
+		z-index: 10000;	
+		opacity: 0;
+		cursor: pointer;
+		transition:0.5s opacity ease;
+	}
 	&--calendar{
 		width: 700px;
 	}
-	&__background {
-		background-color: rgba(0,0,0,0.7); 
-		height: 100%;
-		left: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
+	&__active-bg{
+		opacity: 1;
+		height: 100vh;
+	}
+	&__active{
+		top: 50px;
 		z-index: 10000;
 		
 	}
@@ -28,12 +47,8 @@
 		justify-content: space-between;
 		margin-bottom: 10px;
 	}
-	&__h3{
-		margin: 0;
-		font-size: 20px;
-	}
 	&__notes-tool {
-		background-color: #FFF;
+		background-color: #FFF;	
 		color: #000;
 	}
 	&__notes-window {
@@ -54,10 +69,30 @@
 	&__stikers{
 		@include separate();
 		margin-bottom: 15px;
+		overflow-x: scroll;
 	}
 	&__title{
 		position: relative;
 		text-align: center;
+		font-size: 36px;
+		font-weight: normal;
+		@media ($mobile){
+			font-size: 32px;
+		}
+	}
+	&__subtitle{
+		text-align: center;
+		font-weight: normal;
+		@media ($mobile){
+			font-size: 24px;
+		}
+	}
+	&__main {
+		text-align: left;
+		position: relative;
+		label{
+			margin-right: 10px;
+		}
 	}
 	&__subtitle{
 		text-align: center;
@@ -68,6 +103,9 @@
 		position: relative;
 		label{
 			margin-right: 10px;
+			@media ($mobile){
+				margin-bottom: 5px;
+			}
 		}
 	}
 	&__main:after {
@@ -77,7 +115,7 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
 	}
 	&__main:before {
 		position: absolute;
@@ -86,21 +124,46 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
+	}
+	&__name input[type="text"]{
+		@include fontSizePlaceholder(10px);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__criterion input[type="text"]{
+		@include fontSizePlaceholder(10px);
+		text-align: center;
+		text-transform: uppercase;
 	}
 	&__name,
 	&__importance,
 	&__criterion,
 	&__deadline {
+		@media ($mobile){
+			flex-direction: column;
+		}
 		display: flex;
     	justify-content: space-between;
+    	align-items: center;
     	margin-bottom: 15px;
     	input[type="text"]{
 			border-color: transparent;
+			border-width: 2px;
+			@include colorPlaceholder(#999);
+			&:focus{
+				outline: none;
+				box-shadow:  0px 0px 5px 1px $yellow;
+				@include placeholderFadeOut(1s);
+				@include colorPlaceholder(transparent);
+
+	     	}
     	}
 	}
 	&__importance-range{
 		width: 200px;
+		background-color: transparent;
+		@include styleRange();
 	}
 	&__deadline-day{
 		width: 33px;
@@ -114,8 +177,9 @@
 	}
 	&__deadline-month,
 	&__deadline-year,
-	&__deadlin-day {
+	&__deadline-day {
 		text-align: center;
+		@include fontSizePlaceholder(12px);
 	}
     &__additionally-checkboxes{
     	text-align: left;
@@ -131,7 +195,7 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
     }
     &__additionally {
     	position: relative;
@@ -146,7 +210,141 @@
     	margin: 10px 0px;
     	display: inline-block;
     }
+    &__timeline-wrapper{
+    	margin-top: 75px;
+    	margin-bottom: 50px;	
+    }
+    &__timeline{
+		display: flex;
+		height: 2px;
+		background-color: #000;
+		position: relative;
+		&:before,&:after{
+			content: '';
+			position: absolute;
+			height: 15px;
+			width: 2px;
+			top: 0;
+			transform:translateY(-50%);
+			background-color: #000;
 
+		}
+		&:after{
+			right: 0;
+		}
+    }
+    &__event-dot,&__event-line{
+    	position: absolute;
+    	top: 50%;
+    	transform:translateY(-50%);
+    	@include transitionF();
+    }
+    &__event-dot{
+    	left: 180px;
+    	width: 30px;
+    	height: 30px;
+    	border-radius: 50%;
+    	background-color: $green;
+    }
+    &__event-time {
+    	position: absolute;
+		left: 50%;
+		font-size: 12px;
+		transform:translateX(-50%);
+		top: -15px;
+    }
+    &__event-name{
+		position: absolute;
+		left: 50%;
+		width: 90%;
+		transform:translateX(-50%);
+		top: 20px;
+		font-size: 12px;
+    }
+    &__event-dot-name{
+    	position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		bottom: -20px;
+		font-size: 12px;
+    }
+    &__event-line{
+    	width: 200px;
+    	height: 2px;
+    	left: 325px;
+    	background: linear-gradient(90deg,$orange,$green);
+    	&:before,&:after{
+    		content: '';
+    		height: 30px;
+    		width: 2px;
+    		display: inline-block;
+    		position: absolute;
+    		top: -15px;
+    	}
+    	&:before{
+    		background-color: $orange;
+    		left: 0;
+    	}
+    	&:after{
+    		background-color: $green;
+    		right: 0;
+    	}
+    }
+    &__event-start,&__event-end{
+    	position: absolute;
+    	top: -35px;
+    }
+    &__event-start{
+    	left: 0;
+    	transform:translateX(-50%);
+    	font-size: 12px;
+    }
+    &__event-end{
+    	right: 0;
+    	transform:translateX(50%);
+    	font-size: 12px;
+    }
+    &__total{
+    	display: flex;
+    	justify-content: space-between;
+    }
+    &__total-info{
+    	width: 50%;
+    }
+    &__total-title{
+    	font-size: 18px;
+    	text-align: left;
+    	@include separate();
+    	padding: 10px 0px;
+    }
+    &__total-stat{
+    	display: flex;
+    	justify-content: space-between;
+    	text-align: left;
+    	margin-bottom: 5px;
+    	font-size: 14px;
+    	margin-top: 0;
+    }
+    &__total-percent{
+    	display: flex;
+    	align-items: flex-end;
+    	justify-content: flex-end;
+    	width: 50%;
+    }
+    &__percent-circle{
+    	width: 125px;
+    	height: 125px;
+    	border: 3px solid $green;
+    	border-radius: 50%;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	font-size: 26px;
+    }
+    &__total-canvas{
+    	width: 200px;
+    	height: 200px;
+    }
 }
 .general__notes {
 	.modal {

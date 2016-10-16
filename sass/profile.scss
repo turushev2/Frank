@@ -11,20 +11,70 @@
 	    padding-left: 15px;
     	box-sizing: border-box;
     	padding-right: 15px;
+    	@media ($mobile){
+    		width: 100%;
+    		border: none;
+    		color: #000;
+    		background-color: #FFF;
+    		margin-bottom: 0;
+    	}
 	}
 	&__wall-item{
-		border-bottom: 1px solid;
 		margin-bottom: 10px;
+	}
+	&__wall-item-content{
+		border-bottom: 1px solid;
+		position: relative;
 	}
 	&__wall-item-head{
 		display: inline-block;
 		margin-top: 15px;
 		margin-bottom: 5px;
+		@media ($mobile){
+			text-align: center;
+			display: block;
+		}
 	}
 	&__wall-link{
-		float: right;
 		display: inline-block;
-		margin-top: 15px;
+		position: absolute;
+		right: 0;
+		top: 15px;
+		@media ($mobile){
+			top: 0;
+		}
+	}
+	&__wall-item-content{
+		margin-bottom: 10px;
+	}
+	&__comment-info{
+		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+	}
+	&__comment-author-name,&__comment-time{
+		margin: 0;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	&__comment-time{
+		color: #666;
+	}
+	&__comment-author-avatar{
+		width: auto;
+		height: 50px;
+	}
+	&__comment-content{
+		margin-bottom: 10px;
+	}
+	&__wall-item-comment{
+		padding: 10px;
+		padding-bottom: 5px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		@media ($mobile){
+			border: none;
+		}
 	}
 	&__item-img{
 		display: block;
@@ -38,17 +88,32 @@
 		color: #333333;
 		font-size: 14px;
 		margin-bottom: 20px;
+		@media ($mobile){
+			text-align: center;
+		}
 	}
 	&__wall-link-item{
 		margin-right: 5px;
+		text-decoration: none;
+		display: inline-block;
+		width: 20px;
 	}
 	&__sidebar-element{
 		color: #000;
+		@media ($mobile) {
+			color: #FFF;
+			width: 100%;
+		}
 	}
 	&__sidebar-goals {
 		border:1px solid #313131;
 		padding: 3px;
 		border-radius: 5px;
+		@media ($mobile) {
+			border-right:none;
+			border-left:none;
+			padding: 0px 20px;
+		}
 	}
 	&__goals-title{
 		position: relative;
@@ -58,12 +123,15 @@
 	&__goals-title:before,
 	&__goals-title:after{
 		content:"";
-		height: 15px;
-		width: 15px;
+		height: 8px;
+		width: 8px;
 		position: absolute;
 		cursor: pointer;
-		border-left: 2px solid #000;
-		border-bottom: 2px solid #000;
+		border-left: 1px solid #000;
+		border-bottom: 1px solid #000;
+		@media ($mobile) {
+			display: none;		
+		}
 	}
 	&__goals-content{
 		margin-top: 10px;
@@ -89,14 +157,39 @@
 		border:1px solid #313131;		
 		padding: 10px;
 		border-radius: 5px;
+		@media ($mobile) {
+				display: flex;
+		        flex-wrap: wrap;
+		        justify-content: space-between;
+		        padding: 5px 20px;
+			}
 		.subscribers {
 			display: inline-flex;
 			font-size: 12px;
 			margin-bottom: 5px;
+			@media ($mobile) {
+				img{
+					margin-right: 10px;
+				}
+				margin-right: 10px;
+				
+			}
+		}
+		.subscribers:nth-child(2n){
+			@media ($mobile) {
+				margin-right:0px;
+			}
 		}	
-		.action {
+		.action{
 			font-size: 14px;
 			font-weight: bold;
+			@media ($mobile) {
+				display: block;
+			}
+		}
+		@media ($mobile) {
+			border-right:none;
+			border-left:none;
 		}
 	}
 	&__sidebar{
@@ -108,6 +201,10 @@
 		text-align: center;
 		margin-right: 15px;
 		margin-bottom: 40px;
+		@media ($mobile) {
+			width: 100%;
+			margin-bottom: 0;	
+		}
 	}
 	&__sidebar-subscription{
 		border:1px solid #313131;		
@@ -115,17 +212,31 @@
 	    border-radius: 5px;
 	    display: flex;
 	    flex-wrap: wrap;
+	    @media ($mobile) {
+			border-right:none;
+			border-left:none;
+		    display: flex;
+    		justify-content: space-around;
+		}
 	}
 	&__subscription-name{
 		font-size: 12px;
 	}
 	&__subscription-item {
 		width: 50%;
+		@media ($mobile){
+			margin: 0px 30px;
+			width: inherit;
+		}
 	}
 	&__information {
 		display: flex;
 		width: 100%;
 		margin-bottom: 10px;
+		@media ($mobile) {
+			flex-direction: column;
+			margin-bottom: 0;
+		}
 	}
 	&__information-attribute{
 		margin-bottom: 10px;
@@ -134,16 +245,26 @@
 	}
 	&__information-page-avatar{
 		text-align: center;
+		@media ($mobile) {
+			background-color: #FFF;
+		}
 	}
 	&__information-general{
 		color: #000;
+		@media ($mobile) {
+			text-align: center;
+    		background-color: #dcdcdc;
+		}
 	}
 	&__information-img-avatar{
 		display: block;
 		margin-bottom: 10px;
+		@media ($mobile) {
+			margin: 0 auto;
+		}
 	}
 	&__information-name{
-		
+		color: #000;
 	}
 	&__status {
 		font-size: 16px;
